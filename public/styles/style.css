@@ -1,15 +1,23 @@
 body {
     font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-
-.homepage-content {
+.homepage-main-section {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 400px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.homepage-content.container {
     background-image: url("../images/spotify-background.jpeg");
     background-repeat: none;
-    background-size: cover;
-    width: 100vw;
-    height: 700px;
+    background-size: 100vw;
     margin: 0;
+    width: 1280px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -53,6 +61,7 @@ body {
     text-align: center;
     margin-top: 50px;
     text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 
@@ -103,4 +112,23 @@ body {
 
 .btn.btn-primary:hover {
     background-color: rgba(255, 217, 0, 0.795);
+}
+
+.table {
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+    margin-left: 30px;
+    margin-right:60px;
+    padding-right: 30px;
+}
+
+.table-body{
+    color: rgb(97, 91, 91);
+    font-size: 14px;
+}
+
+.tracks {
+    color: rgb(209, 96, 76);
+    font-weight: 600;
+    font-size: 14px;
 }

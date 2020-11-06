@@ -1,3 +1,6 @@
+// Here is my version. Still need to be compared with Miguel's one for final validation.
+
+
 require('dotenv').config();
 
 const express = require('express');
@@ -65,15 +68,17 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 // This last part is bugged. Check tomorrow when node starts working again.
 app.get('/viewtracks/:albumId', (req, res, next) => {
-  
+
   spotifyApi.getAlbumTracks(req.params.albumId)
   .then((data) => {
-    console.log("Album's tracks", data.body);
-    let albumsTracksList = data.body;
-  res.render('viewtracks', {albumsTracksList} );
+    console.log("Album's tracks:", data);
+    let albumTracksList = data.body.items;
+  res.render('viewtracks', {albumTracksList} );
 })
 .catch(err => console.log('The error while searching artists occurred: ', err));
 })
+
+
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

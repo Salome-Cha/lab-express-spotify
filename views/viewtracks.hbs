@@ -1,5 +1,9 @@
 
 
+<h1 class="page-title">
+ Album's Tracks
+</h1>
+
 
 <table class="table">
 
@@ -7,16 +11,18 @@
             <tr>
             <th scope="col">#</th>
             <th scope="col">Title</th>
-            <th scope="col">Listen</th>
+            <th scope="col"> Listen</th>
             </tr>
         </thead>
 
-{{#each albumsTracksList}}
-        <tbody>
+{{#each albumTracksList}}
+
+        <tbody class="table-body">
             <tr>
-            <th scope="row">{{this.track_number}}</th>
-            <td>{{this.name}}</td>
-            <td>{{this.preview_url}}</td>
+            <th scope="row">{{track_number}}</th>
+            <td class="tracks">{{name}}</td>
+            <td><audio controls src="{{preview_url}}">
+                </audio></td>
             </tr>
         </tbody>
 {{/each}}
