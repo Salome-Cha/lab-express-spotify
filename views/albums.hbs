@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+<h1 class="page-title">
+ Best Albums
+</h1>
+
+<div class="card-deck-wrapper container">
+    <div class="card-deck">
+        {{#each albumsList.items}}
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{images.[0].url}}" alt="Card image cap">
+                    <div class="card-body container">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <a href="/albums/{{id}}" class="btn btn-primary">View tracks</a>
+                    </div>
+                </div> 
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+
+</body>
+</html>

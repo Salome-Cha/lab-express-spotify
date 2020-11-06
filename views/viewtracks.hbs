@@ -1,0 +1,26 @@
+
+
+
+<table class="table">
+
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Listen</th>
+            </tr>
+        </thead>
+
+{{#each albumsTracksList}}
+        <tbody>
+            <tr>
+            <th scope="row">{{this.track_number}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.preview_url}}</td>
+            </tr>
+        </tbody>
+{{/each}}
+
+</table>
+
+
